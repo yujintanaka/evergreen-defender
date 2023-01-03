@@ -1,0 +1,104 @@
+.haramContainer{
+    position: relative;
+    text-align: start;
+}
+
+.haramContainer::after{
+    content: attr(data-tooltip);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.1s ease-out;
+    color: black;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: none;
+    left: 50%;
+    top: 4em;
+    content: attr(data-tooltip);
+    position: absolute;
+    width: 400px;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 30px 90px -20px rgb(0 0 0 / 30%), 0 0 1px 1px rgb(0 0 0 / 5%);;
+    padding: 1.2em;
+    transform: translateX(-50%);
+    z-index: 99999 !important;
+    transition-delay: 0.4s;
+}
+
+.haramContainer:hover::after{
+    transition: 0.1s ease-out;
+    visibility: visible;
+    opacity: 1;
+    color: black;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: none;
+    left: 50%;
+    top: 1.5em;
+    content: attr(data-tooltip);
+    position: absolute;
+    width: 400px;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 30px 90px -20px rgb(0 0 0 / 30%), 0 0 1px 1px rgb(0 0 0 / 5%);;
+    padding: 1.2em;
+    transform: translateX(-50%);
+    z-index: 99999 !important;
+    transition-delay: 0.2s;
+
+}
+
+.haram {
+    margin-right: 0.2em;
+    position: relative;
+    display: inline-block;
+}
+.haram::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    background-image: linear-gradient(transparent 0 48%, red 50% calc(50% + 0.1em), transparent calc(50% + 0.1em) 100%);
+    animation: strikeThrough 1s;
+    animation-fill-mode: forwards;
+    display: inline-block;
+}
+
+.halal {
+    display: inline-block;
+    background-color: #FFFBCE;
+    animation:scaleinto 0.5s, glow 1s;
+    animation-delay: 0.7s;
+    animation-fill-mode: both;
+}
+
+
+@keyframes glow {
+    from{
+        /* transform: scaleX(0); */
+        opacity: 0;
+    }
+    to{
+        /* transform: scaleX(1); */
+        opacity: 1;
+    }
+}
+@keyframes scaleinto {
+    from{
+        width: 1px;
+        font-size: 0%;
+    }
+    to{
+        font-size: auto;
+        width: auto;
+    }
+}
+
+@keyframes strikeThrough {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}

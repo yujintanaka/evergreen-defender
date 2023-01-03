@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Evergreen Defender",
+  "version": "0.0.0.1",
+  "description": "A simple search and replace content filter to protect users from harmful language",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/words.js","scripts/content.js"],
+      "css": ["css/tooltip.css"],
+      "matches": [
+        "https://en.wikipedia.org/*"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage"
+  ]
+}
