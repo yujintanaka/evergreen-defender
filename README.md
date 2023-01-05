@@ -2,13 +2,20 @@
 
 ![logo](./icon.png)
 
-## I will Protect you! Trust :)
+### I will Protect you! Trust :)
 
 The Evergreen defender will replace harmful words and provide alternatives, and provide useful context on why the word must be eliminated from our lexicon.
 
 # Installation and Usage:
+### Chrome Webstore
+Get it from the chrome webstore at:
+https://chrome.google.com/webstore/detail/evergreen-defender/gjbldpgoghonjkionemmdfdnanpomgfo
+
+### Manual Installation:
 Download the files and go to chrome://extensions
 and turn on developer mode on the top right corner. Then load the files as an unpacked extension.
+
+### Usage
 
 ![sample](./sample.jpg)
 
